@@ -1,14 +1,15 @@
-﻿namespace Benchmark
+﻿using System;
+
+namespace Benchmark
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DictLookupCost runner = new DictLookupCost();
-            for (int i = 0; i < 10; i++)
-            {
-                runner.Run();
-            }
+            ConcurrentDict a = new ConcurrentDict();
+            for(int i=0;i<10;i++)
+                a.Run();
+
         }
     }
 }

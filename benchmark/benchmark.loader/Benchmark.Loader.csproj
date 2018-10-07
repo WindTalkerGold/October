@@ -7,8 +7,8 @@
     <ProjectGuid>{0EBFC745-982F-4B36-98C3-33816FFA4C13}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>benchmark.loader</RootNamespace>
-    <AssemblyName>benchmark.loader</AssemblyName>
+    <RootNamespace>Benchmark.Loader</RootNamespace>
+    <AssemblyName>Benchmark.Loader</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
