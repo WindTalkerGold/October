@@ -6,7 +6,7 @@ namespace Benchmark
     {
         static void Main(string[] args)
         {
-            ConcurrentDict a = new ConcurrentDict();
+            TupleAsKey a = new TupleAsKey();
             for(int i=0;i<10;i++)
                 a.Run();
 

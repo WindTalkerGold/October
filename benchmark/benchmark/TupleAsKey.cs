@@ -59,14 +59,14 @@ namespace Benchmark
 
             bool equals;
 
-            long hashCodeCostTp = new Runner(()=> hashCode = tp1.GetHashCode()).Execute(1000).Ticks;
-            long hashCodeCostFoo = new Runner(() => hashCode = foo1.GetHashCode()).Execute(1000).Ticks;
+            double hashCodeCostTp = new Runner(()=> hashCode = tp1.GetHashCode()).Execute(1000).Ticks;
+            double hashCodeCostFoo = new Runner(() => hashCode = foo1.GetHashCode()).Execute(1000).Ticks;
 
-            double equalsCostTp = new Runner(()=>equals = tp1.Equals(tp2)).Execute(1000).TotalMilliseconds;
-            double equalsCostFoo = new Runner(() => equals = foo1.Equals(foo2)).Execute(1000).TotalMilliseconds;
+            double equalsCostTp = new Runner(()=>equals = tp1.Equals(tp2)).Execute(1000).Ticks;
+            double equalsCostFoo = new Runner(() => equals = foo1.Equals(foo2)).Execute(1000).Ticks;
 
-            Console.WriteLine(hashCodeCostFoo+" "+hashCodeCostTp);
-            Console.WriteLine(equalsCostFoo + " " + equalsCostTp);
+            Console.WriteLine(hashCodeCostFoo+" "+hashCodeCostTp+" "+ hashCodeCostTp / hashCodeCostFoo);
+            Console.WriteLine(equalsCostFoo + " " + equalsCostTp+" "+equalsCostTp/equalsCostFoo);
 
         }
     }
